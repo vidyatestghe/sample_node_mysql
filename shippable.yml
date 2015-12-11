@@ -4,7 +4,7 @@ node_js:
   - 0.10.25
 
 services:
-  #- mysql
+  - mysql
 
 # For xunit-file module to put results in shippable folder
 env:
