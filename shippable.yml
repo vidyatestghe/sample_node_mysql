@@ -4,7 +4,7 @@ node_js:
   - 0.10.25
 
 services:
-  - mysql
+  #- mysql
 
 # For xunit-file module to put results in shippable folder
 env:
@@ -23,3 +23,5 @@ script:
 after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test.js -- -u tdd
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+
+build_image: drydock/u14nodpls:tip 
